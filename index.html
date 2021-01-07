@@ -22,7 +22,10 @@
 			content="돌잡이 테스트, 인공지능 돌잡이 테스트, 얼굴상, 얼굴상 테스트, 돌잡이, 얼굴로 보는 돌잡이, 인공지능 돌잡이, AI 얼굴상, AI 돌잡이"
 		/>
 		<meta name="author" content="김지후" />
-		<meta name="description" content="얼굴로 보는 인공지능 돌잡이 테스트, 나의 미래 직업을 찾아보세요!">
+		<meta
+			name="description"
+			content="얼굴로 보는 인공지능 돌잡이 테스트, 나의 미래 직업을 찾아보세요!"
+		/>
 		<link rel="stylesheet" href="style.css" />
 		<link rel="canonical" href="https://stonecatch.site" />
 		<meta property="og:url" content="https://stonecatch.site" />
@@ -32,10 +35,7 @@
 			property="og:description"
 			content="얼굴로 보는 인공지능 돌잡이 테스트, 나의 미래 직업을 찾아보세요! 사진과 데이터는 어디로도 공유되지 않습니다!"
 		/>
-		<meta
-			property="og:image"
-			content=""
-		/>
+		<meta property="og:image" content="" />
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
 		<link rel="icon" href="img/favicon.ico" type="image/x-icon" />
 		<script
@@ -189,7 +189,7 @@
 		<script type="text/javascript">
 			let URL;
 			const urlMale = 'https://teachablemachine.withgoogle.com/models/3y_s-TqSE/';
-			const urlFemale = 'https://teachablemachine.withgoogle.com/models/3y_s-TqSE/';
+			const urlFemale = 'https://teachablemachine.withgoogle.com/models/ko6-Upndu/';
 			let model, webcam, labelContainer, maxPredictions;
 			async function init() {
 				if (document.getElementById('gender').checked) {
@@ -216,82 +216,79 @@
 				var resultTitle, resultExplain, resultCeleb;
 				if (document.getElementById('gender').checked) {
 					switch (prediction[0].className) {
-						case '연예인':
-							resultTitle = '연예인';
+						case "연예인":
+							resultTitle = "연예인"
 							resultExplain =
-								'훈훈한 얼굴을 가진 당신은 평소 주변에서 잘생겼다는 말을 많이 하거나 인기가 많습니다. 하지만 가끔 자신의 모습에 취해 거울앞에 서있기도 합니다!';
-							resultCeleb = '닮은꼴: 이동욱, 공유, 박보검';
+								"훈훈한 얼굴을 가진 당신은 평소 주변에서 잘생겼다는 말을 많이 하거나 인기가 많습니다. 하지만 가끔 자신의 모습에 취해 거울앞에 서있기도 합니다!"
+							resultCeleb = "닮은꼴: 이동욱, 공유, 박보검"
 							break;
-						case '운동선수':
-							resultTitle = '운동선수';
+						case "운동선수":
+							resultTitle = "운동선수"
 							resultExplain =
-								'자칫하면 딱딱해 보일 수 있는 당신이지만! 주변에 있기만 해도 든든하기 때문에 연인이 곁에 두고 싶어 하는 스타일입니다!';
-							resultCeleb = '닮은꼴: 손흥민, 박지성, 류현진';
+								"자칫하면 딱딱해 보일 수 있는 당신이지만! 주변에 있기만 해도 든든하기 때문에 연인이 곁에 두고 싶어 하는 스타일입니다!"
+							resultCeleb = "닮은꼴: 손흥민, 박지성, 류현진"
 							break;
-						case '재벌부자':
-							resultTitle = '재벌부자';
+						case "재벌부자":
+							resultTitle = "재벌부자"
 							resultExplain =
-								'당신은 두려움 따윈없고 늘 도전적인 시도를 해서 돈을 많이 쓰거나 힘을 씁니다! 하지만 운이 좋아 항상 주변의 부러움을 사는 사람입니다!';
-							resultCeleb = '닮은꼴: 이재용, 정의선, 신동빈';
+								"당신은 두려움 따윈없고 늘 도전적인 시도를 해서 돈을 많이 쓰거나 힘을 씁니다! 하지만 운이 좋아 항상 주변의 부러움을 사는 사람입니다!"
+							resultCeleb = "닮은꼴: 이재용, 정의선, 신동빈"
 							break;
-						case '판사':
-							resultTitle = '판사';
+						case "판사":
+							resultTitle = "판사"
 							resultExplain =
-								'당신은 차갑고 냉정한 성격을 가진 사람으로 논리적이며 불의를 참지 못하는 성격입니다! ';
-							resultCeleb = '닮은꼴: 김명수, 박상옥, 천종호';
+								"당신은 차갑고 냉정한 성격을 가진 사람으로 논리적이며 불의를 참지 못하는 성격입니다! 남에게 피해주는 것을 싫어하고 늘 이성적인 판단에 따른 행동을 합니다!"
+							resultCeleb = "닮은꼴: 김명수, 박상옥, 천종호"
 							break;
-						case '학자':
-							resultTitle = '학자';
+						case "학자":
+							resultTitle = "학자"
 							resultExplain =
-								'당신은 안경이 잘어울리는 지적인 남자로 한번 시작한 일에는 끝을 보려는 성격을 가지셨습니다.';
-							resultCeleb = '닮은꼴: 데니스홍, 설민석, 현택환';
+								"당신은 안경이 잘어울리는 지적인 남자로 한번 시작한 일에는 끝을 보려는 성격을 가지셨습니다. 당신은 알고보면 매력이 뿜뿜하는 사람이군요!"
+							resultCeleb = "닮은꼴: 데니스홍, 설민석, 현택환"
 							break;
 						default:
-							resultTitle = '알수없음';
-							resultExplain = '';
-							resultCeleb = '';
+							resultTitle = "알수없음"
+							resultExplain = ""
+							resultCeleb = ""
 					}
-				} else {
+				}
+				else
+				{
 					switch (prediction[0].className) {
-						case '연예인':
-							resultTitle = '귀여운 순둥이 강아지상';
+						case "연예인":
+							resultTitle = "연예인"
 							resultExplain =
-								'다정다감하고 귀여운 당신은 모든 사람들에게 즐거움을 주는 호감형이다! 상냥하고 활발한 성격으로 어디에서도 인기폭발이지만, 애교와 웃음이 많아 연인에게 특히나 사랑스럽다. 당신은 애인바라기로 애인의 관심이 부족하면 시무룩해지고 외로움을 타는 모습이 마치 강아지와 똑 닮았다!';
-							resultCeleb =
-								'강아지상 연예인: 박보영, 아이유, 윤승아, 민아(걸스데이), 한지민';
+								"아름다운 얼굴을 가진 당신은 평소 주변에서 예쁘다는 말을 많이 하거나 인기가 많습니다. 하지만 가끔 자신의 모습에 취해 거울앞에 서있기도 합니다!"
+							resultCeleb = "닮은꼴: 김태희, 아이유, 조보아"
 							break;
-						case '운동선수':
-							resultTitle = '츤데레 매력쟁이 고양이상';
+						case "운동선수":
+							resultTitle = "운동선수"
 							resultExplain =
-								'도도하고 섹시한 당신은 첫인상은 차가워 보이지만 묘한 매력을 풍겨 언제나 인기가 넘친다. 자존심이 세계 1등과 맞먹지만 관심 받는 것을 좋아하고 애인에게 관심이 받고 싶을 때는 애교도 부릴 줄 아는 귀여운 매력을 가졌다. 시크한 츤데레로 연인에게 끊임없이 설렘을 안겨주는 당신은 고양이와 닮았다!';
-							resultCeleb =
-								'고양이상 연예인: 안소희(원더걸스), 오연서, 한예슬, 이성경, 이효리';
+								"남자들 못지않게 에너지가 넘치는 당신! 남자들 보다 여자들에게 인기많은 걸크러쉬같은 스타일입니다!"
+							resultCeleb = "닮은꼴: 박세리, 지소연, 기보배"
 							break;
-						case '재벌부자':
-							resultTitle = '상큼발랄한 매력의 토끼상';
+						case "재벌부자":
+							resultTitle = "재벌부자"
 							resultExplain =
-								'발랄하고 귀여운 당신은 주변 사람들에게 기쁨을 주는 행복바이러스다! 호기심이 많아 활발하며 귀엽고 순수한 외모로 연인의 보호본능을 자극한다. 존재 자체가 상큼하고 깜찍한 당신은 특별한 애교 없이도 연인에게 너무나도 사랑스럽다!';
-							resultCeleb =
-								'토끼상 연예인: 수지, 나연(트와이스), 예린(여자친구), 한승연(카라), 문채원';
+								"당신은 두려움 따윈없고 늘 도전적인 시도를 해서 돈을 많이 쓰거나 힘을 씁니다! 하지만 운이 좋아 항상 주변의 부러움을 사는 사람입니다!"
+							resultCeleb = "닮은꼴: 이부진, 이서현, 홍라희"
 							break;
-						case '판사':
-							resultTitle = '온순하고 우아한 사슴상';
+						case "판사":
+							resultTitle = "판사"
 							resultExplain =
-								'맑고 영롱한 분위기의 당신은 사슴처럼 차분한 성격의 소유자다. 초롱초롱한 눈망울이 당신의 가장 큰 트레이드마크며 따스하고 온순한 눈빛을 가져 사랑스러움을 항상 머금고 있다! 부끄러움이 많아 애정표현이 낯설은 당신은 연인에게조차 신비한 존재지만 따뜻한 성격으로 연인의 마음을 사로잡는 능력을 가졌다.';
-							resultCeleb =
-								'사슴상 연예인: 윤아(소녀시대), 이연희, 고아라, 문근영, 정유미(부산행 배우)';
+								"당신은 차갑고 냉정한 성격을 가진 사람으로 논리적이며 불의를 참지 못하는 성격입니다! 남에게 피해주는 것을 싫어하고 늘 이성적인 판단에 따른 행동을 합니다!"
+							resultCeleb = "닮은꼴: 노정희, 민유숙, 조희진"
 							break;
-						case '학자':
-							resultTitle = '섹시한 밀당고수 여우상';
+						case "학자":
+							resultTitle = "학자"
 							resultExplain =
-								'사람을 홀리는 매력을 가진 당신은 선뜻 다가가기 힘든 섹시한 매력을 가졌다. 우아한 외모에 더해 뛰어난 센스의 성격을 가진 당신은 어딜가도 주목받는 주인공이다! 사교적인 성격을 가져 연인에게도 적극적으로 애정표현을 하지만 밀당의 고수인 당신은 연인의 혼을 쏙 빼놓는 매력쟁이다.';
-							resultCeleb =
-								'여우상 연예인: 경리(나인뮤지스), 예지(있지), 한혜진(모델), 헤이즈, 지연(티아라)';
+								"당신은 안경이 잘어울리는 지적인 여자로 한번 시작한 일에는 끝을 보려는 성격을 가졌습니다! 당신은 알고보면 매력이 뿜뿜하는 사람이군요!"
+							resultCeleb = "닮은꼴: 김빛내리, 이상희, 함시현"
 							break;
 						default:
-							resultTitle = '알수없음';
-							resultExplain = '';
-							resultCeleb = '';
+							resultTitle = "알수없음"
+							resultExplain = ""
+							resultCeleb = ""
 					}
 				}
 				var title =
@@ -319,23 +316,23 @@
 					}
 					var labelTitle;
 					switch (prediction[i].className) {
-						case '연예인':
-							labelTitle = '연예인';
+						case "연예인":
+							labelTitle = "연예인"
 							break;
-						case '운동선수':
-							labelTitle = '운동선수';
+						case "운동선수":
+							labelTitle = "운동선수"
 							break;
-						case '재벌부자':
-							labelTitle = '재벌부자';
+						case "재벌부자":
+							labelTitle = "재벌부자"
 							break;
-						case '판사':
-							labelTitle = '판사';
+						case "판사":
+							labelTitle = "판사"
 							break;
-						case '학자':
-							labelTitle = '학자';
+						case "학자":
+							labelTitle = "학자"
 							break;
 						default:
-							labelTitle = '알수없음';
+							labelTitle = "알수없음"
 					}
 					var label =
 						"<div class='job-label d-flex align-items-center'>" + labelTitle + '</div>';
