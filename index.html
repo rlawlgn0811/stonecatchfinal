@@ -196,7 +196,7 @@
 			const urlFemale = 'https://teachablemachine.withgoogle.com/models/ko6-Upndu/';
 			let model, webcam, labelContainer, maxPredictions;
 			async function init() {
-				if (document.getElementById('gender').checked) {
+				if (document.getElementById('switch').checked) {
 					URL = urlMale;
 				} else {
 					URL = urlFemale;
@@ -218,7 +218,7 @@
 				prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
 				console.log(prediction[0].className);
 				var resultTitle, resultExplain, resultCeleb;
-				if (document.getElementById('gender').checked) {
+				if (document.getElementById('switch').checked) {
 					switch (prediction[0].className) {
 						case "연예인":
 							resultTitle = "연예인"
