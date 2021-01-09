@@ -408,11 +408,6 @@ input:checked + label > .knob > i:before {
     margin: 0 auto;
 }
 
-.ad-banner2 {
-	width: 728px;
-    margin: 0 auto;
-}
-
 
 /*switch css*/
 input[type=checkbox]{
