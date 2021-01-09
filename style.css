@@ -1,15 +1,22 @@
+@font-face {
+    font-family: 'ELAND_Nice_M';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/ELAND_Nice_M.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-  font-family: 'Jua', sans-serif;
+  font-family: 'ELAND_Nice_M', sans-serif;
   background-color: #ffffff;
   box-sizing: border-box;
-  color: #35465d;
+  color: #000000;
 }
 .file-upload {
-    padding: 15% 3%;
+    padding: 3% 3%;
     margin: 0 auto;
     border-radius: 10px;
-    border: solid 1.5px #f6f7fa;
-    background-color: #f6f7fa;
+    border: solid 1.5px #ffffff;
+    background-color: #ffffff;
 }
 .file-upload-btn {
   width: 100%;
@@ -58,19 +65,20 @@ body {
 }
 
 .image-upload-wrap {
-    width: 60%;
+    width: 70%;
+	height: 90%;
     margin: 0 auto;
     position: relative;
     object-fit: contain;
     border-radius: 10px;
-    border: dashed 1.5px #35465d;
+    border: solid 3px #000000;
     background-color: #ffffff;
 }
 
 .image-dropping,
 .image-upload-wrap:hover {
-    background-color: #35465d82;
-    border: 1.5px dashed #ffffff;
+    background-color: #666666;
+    border: 1.5px solid #ffffff;
 }
 
 .image-title-wrap {
@@ -83,6 +91,7 @@ body {
 }
 
 .drag-text h3 {
+	font-size 500px;
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -120,15 +129,6 @@ body {
   transition: all .2s ease;
 }
 
-.navbar-light .navbar-brand {
-  line-height: 1.68;
-  text-align: left;
-  color: #35465d; 
-}
-
-.navbar-light .navbar-toggler {
-    border-color: #ffffff;
-}
 
 .section {
     margin-top: 50px;
@@ -137,13 +137,13 @@ body {
 .title {
   line-height: 1.67;
   text-align: center;
-  color: #35465d;
+  color: #000000;
 }
 
 .subtitle {
   line-height: 1.53;
   text-align: center;
-  color: #35465d;
+  color: #666666;
 }
 
 /* On screens that are 600px or less, set the background color to olive */
@@ -168,7 +168,7 @@ body {
     font-size: 1.5rem;
     line-height: 1.53;
     text-align: center;
-    color: #35465d;
+    color: #000000;
     margin: 0 auto;
 }
 
@@ -322,8 +322,8 @@ body {
     color: #e56995;
     font-size: 1.2rem;
 }
-
 /* gender */
+/*
 input#gender {
   display: none;
 }
@@ -402,7 +402,7 @@ input:checked + label > .knob > i:before {
   width: 12px;
   left: 0px;
   transform: rotate(134deg);
-}
+}*/
 
 .ad-banner {
     width: 320px;
@@ -412,4 +412,57 @@ input:checked + label > .knob > i:before {
 .ad-banner2 {
 	width: 728px;
     margin: 0 auto;
+}
+
+
+/*switch css*/
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 80px;
+	height: 40px;
+	background: 	#ffc0cb;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 30px;
+	height: 30px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background: #50bcdf;
+}
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+	
+}
+
+label:active:after {
+	width: 40px;
+}
+
+// centering
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
 }
